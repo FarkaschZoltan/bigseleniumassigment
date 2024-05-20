@@ -47,7 +47,7 @@ public class SettingsFunctionalityTest {
 
     homePage.pressSettingsButton();
     Thread.sleep(2000);
-    Assert.assertEquals("Adataid módosítása", driver.getTitle());
+    Assert.assertEquals("https://www.gyakorikerdesek.hu/adatmodositas", driver.getCurrentUrl());
 
     for (int i = 0; i < 2; i++) {
       boolean originalValue = settingsPage.readNameVisible();
@@ -72,11 +72,11 @@ public class SettingsFunctionalityTest {
 
     homePage.pressSettingsButton();
     Thread.sleep(2000);
-    Assert.assertEquals("Adataid módosítása", driver.getTitle());
+    Assert.assertEquals("https://www.gyakorikerdesek.hu/adatmodositas", driver.getCurrentUrl());
 
     settingsPage.pressNewsletterSettings();
     Thread.sleep(2000);
-    Assert.assertEquals("GyakoriKerdesek.hu hírlevél", driver.getTitle());
+    Assert.assertEquals("https://www.gyakorikerdesek.hu/hirlevel", driver.getCurrentUrl());
 
     for (int i = 0; i < 2; i++) {
       boolean originalValue = settingsPage.readInterestingQuestionsNewsletter();

@@ -53,12 +53,6 @@ public class LoginFunctionalityTest {
     HomePage homePage = TestUtil.login(driver);
 
     //waiting for screen change
-    wait.until(ExpectedConditions.urlToBe("https://www.gyakorikerdesek.hu/belepes"));
-
-    LoginPage loginPage = new LoginPage(driver);
-    loginPage.login(props.getProperty("username"), props.getProperty("password"));
-
-    //waiting for screen change
     wait.until(ExpectedConditions.urlToBe("https://www.gyakorikerdesek.hu/"));
 
     WebElement logoutButton = waitVisibiiltyAndFindElement(logoutLocator);
